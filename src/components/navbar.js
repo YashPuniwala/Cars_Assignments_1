@@ -18,20 +18,29 @@ const Navbar = ({ setSearchQuery }) => {
     setSearchQuery(searchQueryLocal);
   };
 
-   const handleHomeClick = () => {
-    // Reset the local searchQueryLocal and the global searchQuery
+  const handleHomeClick = () => {
     setSearchQueryLocal("");
     setSearchQuery("");
   };
 
   return (
-    <Stack sx={{ padding: "30px", backgroundColor: "#C3C3C3" }}>
+    <Stack
+      sx={{
+        padding: "30px",
+        backgroundColor: "#C3C3C3",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <Box
         sx={{
+          margin: "auto",
+          width: "90%",
           borderRadius: "10px",
           backgroundColor: "#E0E0E0",
           padding: "10px",
           display: "flex",
+          flexDirection: {xs:"column", sm:"row"},
           alignItems: "center",
           justifyContent: "space-between",
         }}
@@ -42,14 +51,18 @@ const Navbar = ({ setSearchQuery }) => {
             value={searchQueryLocal}
             onChange={(e) => setSearchQueryLocal(e.target.value)}
             style={{ width: "200px" }} // Adjust the width as needed
-          />
+          />  
           <IconButton onClick={handleSearch}>
             <SearchIcon />
           </IconButton>
         </Paper>
 
-        <Link to="/page/1" style={{ textDecoration: "none" }}  onClick={handleHomeClick}>
-          <Paper elevation={4} sx={{ borderRadius: "10px", padding: "8px" }}>
+        <Link
+          to="/page/1"
+          style={{ textDecoration: "none" }}
+          onClick={handleHomeClick}
+        >
+          <Paper elevation={4} sx={{ borderRadius: "10px", padding: "8px", marginTop:{xs:"10px", sm:"0px"} }}>
             <Typography variant="body1" fontSize="17px">
               Home
             </Typography>

@@ -53,7 +53,6 @@ const CarCard = ({ car }) => {
           className={classes.media}
           image={car.image}
           title={car.name}
-          // sx={{ width: 30, height: 180 }}
         />
         <CardContent>
           <Box

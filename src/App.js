@@ -12,9 +12,11 @@ function App() {
     <BrowserRouter>
       <Navbar setSearchQuery={setSearchQuery} />
       <Routes>
-      <Route
+        <Route
           path="/"
-          element={<CarPage data={data} searchQuery={searchQuery} currentPage={1} />}
+          element={
+            <CarPage data={data} searchQuery={searchQuery} currentPage={1} />
+          }
         />
         <Route
           path="/page/:page"
