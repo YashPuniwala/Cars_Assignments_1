@@ -52,7 +52,7 @@ const CarPage = ({ data, searchQuery }) => {
       <Grid container spacing={3}>
         {Array.isArray(currentCars) ? (
           currentCars.map((car) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={car.id}>
+            <Grid item xs={12} sm={6} md={4} key={car.id}>
               <CarCard car={car} />
             </Grid>
           ))
